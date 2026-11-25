@@ -1,0 +1,21 @@
+start: declaration* value
+declaration: value "->" NAME
+
+?value: NUMBER -> number
+      | STRING -> string
+      | dictionary
+      | reference
+
+dictionary: "$[" [item ("," item)* [","]] "]"
+?item: pair | declaration
+pair: NAME ":" value
+reference: "@(" NAME ")"
+
+NAME: /[A-Z]+/
+NUMBER: /[+-]?\d+\.\d+/
+STRING: /'[^']*'/s
+COMMENT: /\{-[\s\S]*?-\}/
+
+%import common.WS
+%ignore WS
+%ignore COMMENT

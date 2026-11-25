@@ -1,0 +1,35 @@
+[
+  {
+    "source": "examples/web.conf",
+    "output": "build/examples/web.xml",
+    "root_type": "dictionary",
+    "checked_values": {
+      "HTTP/HOST": "api.example.test",
+      "HTTP/PORT": "8080.0",
+      "DATABASE/POOL/MAX": "10.0"
+    },
+    "matched": true
+  },
+  {
+    "source": "examples/laboratory.conf",
+    "output": "build/examples/laboratory.xml",
+    "root_type": "dictionary",
+    "checked_values": {
+      "SENSOR/MODEL": "T & H <logger>",
+      "SENSOR/CALIBRATION/OFFSET": "-0.25",
+      "LIMITS/REFERENCE": "21.50"
+    },
+    "matched": true
+  },
+  {
+    "source": "examples/game.conf",
+    "output": "build/examples/game.xml",
+    "root_type": "dictionary",
+    "checked_values": {
+      "DISPLAY/WIDTH": "1280.0",
+      "PLAYER/MOVEMENT/SPEED": "100.0",
+      "SCORE/MULTIPLIER": "1.5"
+    },
+    "matched": true
+  }
+]
